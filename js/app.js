@@ -4,54 +4,50 @@ Mandar alert para informar que ingrese su numero de tarjeta sino continuar
 Guardar el numero en la variable "creditCardNumber"
 */
 
-function isValidCard (cardNumber)                                                                 {
+function isValidCard (creditCardNumber)                                                                 {
 
-	
-}
-var creditCardNumber = prompt("Ingrese por favor su número de tarjeta de crédito");
+	if(creditCardNumber === "") {
+  	alert("Por favor ingrese su número de tarjeta");
+	};
 
-if(creditCardNumber === "") {
-  alert("Por favor ingrese su número de tarjeta");
-};
+	//Declarar un arreglo vacio llamado "creditCardNumber_Array"
 
-//Declarar un arreglo vacio llamado "creditCardNumber_Array"
+	var creditCardNumber_Array = [];
 
-var creditCardNumber_Array = [];
+	//Meter cada elemento de la variable "creditCardNumber" en el array "creditCardNumber_Array"
 
-//Meter cada elemento de la variable "creditCardNumber" en el array "creditCardNumber_Array"
-
-for(var i = 0; i < creditCardNumber.length; i++)  {	
+	for(var i = 0; i < creditCardNumber.length; i++)  {	
 	creditCardNumber_Array.push(creditCardNumber.charAt(i));
-}
+	}
 
-//Invertir los elementos del array "creditCardNumber_Array" con el metodo reverse()
-creditCardNumber_Array = creditCardNumber_Array.reverse();
-console.log(creditCardNumber_Array);
+	//Invertir los elementos del array "creditCardNumber_Array" con el metodo reverse()
+	creditCardNumber_Array = creditCardNumber_Array.reverse();
+	console.log(creditCardNumber_Array);
 
-/*Crear un FOR que con un IF dentro en el cual los numeros en un indice par se multipliquen por 2 
-y los numeros en un indice impar se mantengan igual. 
-Guardar nuevos digitos en un array nuevo llamado "newArray"
-*/
+	/*Crear un FOR que con un IF dentro en el cual los numeros en un indice par se multipliquen por 2 
+	y los numeros en un indice impar se mantengan igual. 
+	Guardar nuevos digitos en un array nuevo llamado "newArray"
+	*/
 
-var newArray= [];
-for(var j = 0; j < creditCardNumber_Array.length; j++) 				{
+	var newArray= [];
+	for(var j = 0; j < creditCardNumber_Array.length; j++) 				{
 	if(j % 2 !==0)												{
-		var result = creditCardNumber_Array[j] * 2;
+			var result = creditCardNumber_Array[j] * 2;
 			/*Dentro del IF, poner otra condicion de que en el caso de numero en indice par, 
 			si resultado es mayor a 9, separar digitos*/
 			if(result > 9)								 	{
 				result= result.toString();
 				for( var k = 0; k < result.length; k++){
 					newArray.push(result[k]);
-				}
-			} else                                      	{
+					}
+				} else                                      	{
 				newArray.push(result);
-			}
-	}else 														{
+				}
+		}else 														{
 		result= creditCardNumber_Array[j] * 1;
 		newArray.push(result);
+		}
 	}
-}
 
 //Convertir strings a numbers
 //Sumar elementos de nuevo array con un FOR y guardar en variable "sum"
@@ -75,7 +71,9 @@ if(residue === 0)	{
 }
 
 
+}
 
+console.log(isValidCard(prompt("Ingrese por favor su número de tarjeta de crédito")));
 
 
 
