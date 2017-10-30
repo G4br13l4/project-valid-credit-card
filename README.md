@@ -1,4 +1,5 @@
 ## Proyecto tarjeta de credito valida
+
 1. Pedir a usuario que ingrese numero de tarjeta de credito
 2. Verificar que el usuario no ingrese un campo vacio
 3. Mandar alert para informar que ingrese su numero de tarjeta sino continuar
@@ -16,5 +17,6 @@
 15. Al resultado de la suma, sacar el residuo de la division entre 10 y guardar en variable
 16. Mostrar si es una tarjeta valida si su residuo es 0
 17. Mostrar que es una tarjeta invalida si su residuo no es 0
+
 
 
