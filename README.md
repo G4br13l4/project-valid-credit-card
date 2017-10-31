@@ -12,11 +12,12 @@
 10. Dentro del IF, poner otra condicion de que en el caso de numero en indice par, si resultado es mayor a 9, separar digitos
 11. Guardar nuevos digitos en un array nuevo llamado "newArray"
 12. Declarar variable "sum"
-13. Convertir strings a numbers
+13. Convertir strings de "newArray" a numbers
 14. Sumar elementos de nuevo array con un FOR y guardar en variable "sum"
 15. Al resultado de la suma, sacar el residuo de la division entre 10 y guardar en variable
 16. Mostrar si es una tarjeta valida si su residuo es 0
 17. Mostrar que es una tarjeta invalida si su residuo no es 0
 
-
+// Me falta integrar el return de la funcion
+// creo que a una variable le puse array y es un object XD
 
